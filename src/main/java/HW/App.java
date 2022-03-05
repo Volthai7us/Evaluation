@@ -3,13 +3,17 @@
  */
 package HW;
 
+import java.util.ArrayList;
+
 
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
+    public ArrayList<Integer> evaluate(ArrayList<Integer> coef, int nTh, char mode)
+    {
+        if(coef == null || (mode != 'd' && mode != 'i'))
+        {
+            return null;
+        }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        return null;
     }
 }

@@ -4,11 +4,26 @@
 package HW;
 
 import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
+    @Test void testArrayListIsNull() {
         App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+        ArrayList<Integer> coef = null;
+        int nTh = 2;
+        char mode = 'd';
+
+        assertNull(classUnderTest.evaluate(coef, nTh, mode));
+    }
+    @Test void testModeIsUnvalid() {
+        App classUnderTest = new App();
+
+        ArrayList<Integer> coef = null;
+        int nTh = 2;
+        char mode = 'a';
+
+        assertNull(classUnderTest.evaluate(coef, nTh, mode));
     }
 }
