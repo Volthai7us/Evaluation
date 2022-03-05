@@ -61,4 +61,16 @@ class AppTest {
 
         assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
     }
+
+    @Test void testFirstIntegrate() {
+        App classUnderTest = new App();
+
+        int[] coef = new int[]{2, 6};
+        int nTh = 1;
+        char mode = 'i';
+
+        int expected[] = {0, 2, 3};
+
+        assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
+    }
 }

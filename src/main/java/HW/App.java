@@ -29,7 +29,15 @@ public class App {
 
         else if(mode == 'i')
         {
+            for(int i=0; i < nTh; i++)
+            {
+                result = new int[coef.length+1];
 
+                for(int j=0; j < coef.length; j++)
+                {
+                    result[j+1] = coef[j] / (j+1); 
+                }
+            }
         }
 
         return result;
