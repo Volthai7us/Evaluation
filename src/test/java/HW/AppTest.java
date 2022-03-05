@@ -37,4 +37,28 @@ class AppTest {
 
         assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
     }
+
+    @Test void testSecondDerivative() {
+        App classUnderTest = new App();
+
+        int[] coef = new int[]{5, 2, 3};
+        int nTh = 2;
+        char mode = 'd';
+
+        int expected[] = {6};
+
+        assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
+    }
+
+    @Test void testnThDerivative() {
+        App classUnderTest = new App();
+
+        int[] coef = new int[]{5, 2, 3, 5, 7, 2};
+        int nTh = 4;
+        char mode = 'd';
+
+        int expected[] = {168, 240};
+
+        assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
+    }
 }

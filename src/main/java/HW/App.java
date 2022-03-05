@@ -12,15 +12,18 @@ public class App {
             return null;
         }
 
-        int[] result = new int[coef.length-1];
+        int[] result = null;
         if(mode == 'd')
         {
             for(int i=0; i < nTh; i++)
             {
+                result = new int[coef.length-1];
+
                 for(int j=1; j < coef.length; j++)
                 {
                     result[j-1] = coef[j] * j;
                 }
+                coef = result;
             }
         }
 
