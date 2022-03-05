@@ -73,4 +73,28 @@ class AppTest {
 
         assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
     }
+    
+    @Test void testSecondIntegrate() {
+        App classUnderTest = new App();
+
+        double[] coef = new double[]{2, 6};
+        int nTh = 2;
+        char mode = 'i';
+
+        double expected[] = {0, 0, 1, 1};
+
+        assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
+    }
+
+    @Test void testFloatNumberCoefIntegerate() {
+        App classUnderTest = new App();
+
+        double[] coef = new double[]{2, 8};
+        int nTh = 2;
+        char mode = 'i';
+
+        double expected[] = {0, 0, 1, 4.0/3.0};
+
+        assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
+    }
 }

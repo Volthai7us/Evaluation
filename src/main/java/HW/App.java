@@ -35,8 +35,9 @@ public class App {
 
                 for(int j=0; j < coef.length; j++)
                 {
-                    result[j+1] = coef[j] / (j+1); 
+                    result[j+1] = coef[j] / (double) (j+1); 
                 }
+                coef = result;
             }
         }
 
