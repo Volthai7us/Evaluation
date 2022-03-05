@@ -10,7 +10,7 @@ class AppTest {
     @Test void testArrayListIsNull() {
         App classUnderTest = new App();
 
-        int[] coef = null;
+        double[] coef = null;
         int nTh = 2;
         char mode = 'd';
 
@@ -19,7 +19,7 @@ class AppTest {
     @Test void testModeIsUnvalid() {
         App classUnderTest = new App();
 
-        int[] coef = new int[]{1, 2, 3};
+        double[] coef = new double[]{1, 2, 3};
         int nTh = 2;
         char mode = 'a';
 
@@ -29,11 +29,11 @@ class AppTest {
     @Test void testFirstDerivative() {
         App classUnderTest = new App();
 
-        int[] coef = new int[]{5, 2, 3};
+        double[] coef = new double[]{5, 2, 3};
         int nTh = 1;
         char mode = 'd';
 
-        int expected[] = {2, 6};
+        double expected[] = {2, 6};
 
         assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
     }
@@ -41,11 +41,11 @@ class AppTest {
     @Test void testSecondDerivative() {
         App classUnderTest = new App();
 
-        int[] coef = new int[]{5, 2, 3};
+        double[] coef = new double[]{5, 2, 3};
         int nTh = 2;
         char mode = 'd';
 
-        int expected[] = {6};
+        double expected[] = {6};
 
         assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
     }
@@ -53,11 +53,11 @@ class AppTest {
     @Test void testnThDerivative() {
         App classUnderTest = new App();
 
-        int[] coef = new int[]{5, 2, 3, 5, 7, 2};
+        double[] coef = new double[]{5, 2, 3, 5, 7, 2};
         int nTh = 4;
         char mode = 'd';
 
-        int expected[] = {168, 240};
+        double expected[] = {168, 240};
 
         assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
     }
@@ -65,11 +65,11 @@ class AppTest {
     @Test void testFirstIntegrate() {
         App classUnderTest = new App();
 
-        int[] coef = new int[]{2, 6};
+        double[] coef = new double[]{2, 6};
         int nTh = 1;
         char mode = 'i';
 
-        int expected[] = {0, 2, 3};
+        double expected[] = {0, 2, 3};
 
         assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
     }
