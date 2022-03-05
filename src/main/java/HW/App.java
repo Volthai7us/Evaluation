@@ -3,17 +3,32 @@
  */
 package HW;
 
-import java.util.ArrayList;
-
 
 public class App {
-    public ArrayList<Integer> evaluate(ArrayList<Integer> coef, int nTh, char mode)
+    public int[] evaluate(int[] coef, int nTh, char mode)
     {
-        if(coef == null || (mode != 'd' && mode != 'i'))
+        if(coef == null || (mode != 'd' && mode != 'i') || nTh < 0)
         {
             return null;
         }
 
-        return null;
+        int[] result = new int[coef.length-1];
+        if(mode == 'd')
+        {
+            for(int i=0; i < nTh; i++)
+            {
+                for(int j=1; j < coef.length; j++)
+                {
+                    result[j-1] = coef[j] * j;
+                }
+            }
+        }
+
+        else if(mode == 'i')
+        {
+
+        }
+
+        return result;
     }
 }
