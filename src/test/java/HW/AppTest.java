@@ -8,93 +8,77 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test void testArrayListIsNull() {
-        App classUnderTest = new App();
-
         double[] coef = null;
         int nTh = 2;
         char mode = 'd';
 
-        assertNull(classUnderTest.evaluate(coef, nTh, mode));
+        assertNull(App.evaluate(coef, nTh, mode));
     }
     @Test void testModeIsUnvalid() {
-        App classUnderTest = new App();
-
         double[] coef = new double[]{1, 2, 3};
         int nTh = 2;
         char mode = 'a';
 
-        assertNull(classUnderTest.evaluate(coef, nTh, mode));
+        assertNull(App.evaluate(coef, nTh, mode));
     }
 
     @Test void testFirstDerivative() {
-        App classUnderTest = new App();
-
         double[] coef = new double[]{5, 2, 3};
         int nTh = 1;
         char mode = 'd';
 
         double expected[] = {2, 6};
 
-        assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
+        assertArrayEquals(expected, App.evaluate(coef, nTh, mode));
     }
 
     @Test void testSecondDerivative() {
-        App classUnderTest = new App();
-
         double[] coef = new double[]{5, 2, 3};
         int nTh = 2;
         char mode = 'd';
 
         double expected[] = {6};
 
-        assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
+        assertArrayEquals(expected, App.evaluate(coef, nTh, mode));
     }
 
     @Test void testnThDerivative() {
-        App classUnderTest = new App();
-
         double[] coef = new double[]{5, 2, 3, 5, 7, 2};
         int nTh = 4;
         char mode = 'd';
 
         double expected[] = {168, 240};
 
-        assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
+        assertArrayEquals(expected, App.evaluate(coef, nTh, mode));
     }
 
     @Test void testFirstIntegrate() {
-        App classUnderTest = new App();
-
         double[] coef = new double[]{2, 6};
         int nTh = 1;
         char mode = 'i';
 
         double expected[] = {0, 2, 3};
 
-        assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
+        assertArrayEquals(expected, App.evaluate(coef, nTh, mode));
     }
     
     @Test void testSecondIntegrate() {
-        App classUnderTest = new App();
-
         double[] coef = new double[]{2, 6};
         int nTh = 2;
         char mode = 'i';
 
         double expected[] = {0, 0, 1, 1};
 
-        assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
+        assertArrayEquals(expected, App.evaluate(coef, nTh, mode));
     }
 
     @Test void testFloatNumberCoefIntegerate() {
-        App classUnderTest = new App();
-
         double[] coef = new double[]{2, 8};
         int nTh = 2;
         char mode = 'i';
 
         double expected[] = {0, 0, 1, 4.0/3.0};
 
-        assertArrayEquals(expected, classUnderTest.evaluate(coef, nTh, mode));
+        assertArrayEquals(expected, App.evaluate(coef, nTh, mode));
     }
 }

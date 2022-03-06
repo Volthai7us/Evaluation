@@ -1,0 +1,38 @@
+<title>My application</title>
+<body style="background-color:powderblue;">
+  <h1><font 
+      size="15" 
+      face="verdana" 
+      color="blue"> 
+      <center>Evaluation</center>
+
+    </font> </h1>
+  <body> 
+  <center>
+    <font 
+      size="5" 
+      face="verdana" 
+      color="black"> 
+      {{intro}}
+    </font> 
+
+    <font 
+      size="5" 
+      face="verdana" 
+      color="red"> 
+      {{result}}
+    </font> 
+  </center> 
+  <br>
+  </body>
+
+
+  <form action="compute" method="post">
+
+        <center><label for="story">Enter coefs: </label><textarea name="coef" rows="1" cols="30"></textarea></center>
+        <center><label for="story">Enter nTh  : </label><textarea name="nTh" rows="1" cols="30"></textarea></center>
+        <center><label for="story">Mode       : </label><textarea name="mode" rows="1" cols="30"></textarea></center>
+        <br>
+        <center><input type="submit"></center>
+        
+  </form>
